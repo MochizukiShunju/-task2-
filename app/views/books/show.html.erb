@@ -1,2 +1,19 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<html lang="ja" >
+  <head>
+    <mate charset="UTF-8" />
+    <link rel="stylesheet" href="練習.css" />
+  </head>
+  <body>
+
+    <div class="c">
+      <p><b>Title:</b><%= @book.title %></p>
+      <p><b>Body:</b><%= @book.body %></p>
+    </div>
+
+    <div class="d">
+      <p>
+      <a class="text-color" href="index.html">Edit</a>|<a class="text-color" href="index.html">Back</a>
+      </p>
+    </div>
+  </body>
+</html>
