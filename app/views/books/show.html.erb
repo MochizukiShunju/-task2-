@@ -1,9 +1,14 @@
 <html lang="ja" >
   <head>
     <mate charset="UTF-8" />
-    <link rel="stylesheet" href="練習.css" />
+    <link rel="stylesheet" href="application.css" />
   </head>
   <body>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 
     <div class="c">
       <p><b>Title:</b><%= @book.title %></p>
@@ -11,8 +16,7 @@
     </div>
 
     <div class="d">
-      <p>
-      <a class="text-color" href="index.html">Edit</a>|<a class="text-color" href="index.html">Back</a>
+      <p><%= link_to "Edit", edit_book_path(@book.id) %>|<a href="https://6d951fe22f4748c09be4bcd3740dee42.vfs.cloud9.us-east-1.amazonaws.com/books">Back</a>
       </p>
     </div>
   </body>
