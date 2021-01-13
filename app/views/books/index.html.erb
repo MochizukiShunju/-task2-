@@ -32,8 +32,17 @@
     <div class="create-box">
       <h4>New book</h4>
       <% if @book.errors.any? %>
-      <p><font color="#FF0000">errors prohibited this book from being saved</font></p>
+       <p><font color="#FF0000">errors prohibited this book from being saved</font></p>
       <% end %>
+
+      <% if @book.errors.include?(:title) %>
+       <p>・Title can't be blank</font></p>
+      <% end %>
+
+      <% if @book.errors.include?(:body) %>
+       <p>・Body can't be blank</font></p>
+      <% end %>
+
       <%= form_with model: @book, local:true do |f| %>
         <p>Title</p>
         <%= f.text_field :title %>
