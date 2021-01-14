@@ -26,7 +26,7 @@
         <%= f.text_area :body %><br>
         <%= f.submit 'Update Book' %>
      <% end %>
-     <p><%= link_to "Show", book_path(@book.id) %>|<a href="https://6d951fe22f4748c09be4bcd3740dee42.vfs.cloud9.us-east-1.amazonaws.com/books">Back</a></p>
+     <%= link_to "Show", book_path(@book.id) %>|<%= link_to "Back", books_path %>
    </main>
   </body>
 </html>
